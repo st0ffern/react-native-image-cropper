@@ -54,18 +54,20 @@ class ImageCrop extends Component {
 				//We are moving the image
 				if (evt.nativeEvent.changedTouches.length <= 1){
 					if (this.props.panToMove){
-						var trackX = (gestureState.dx/this.props.cropWidth);
-						var trackY = (gestureState.dy/this.props.cropHeight);
-						var newPosX = (Number(this.offsetX) - Number(trackX)/2);
-						var newPosY = (Number(this.offsetY) - Number(trackY)/2);
+
+						var trackX = (gestureState.dx/this.props.cropWidth)*this.state.zoom;
+						var trackY = (gestureState.dy/this.props.cropHeight)*this.state.zoom;
+						var newPosX = (Number(this.offsetX) - Number(trackX));
+						var newPosY = (Number(this.offsetY) - Number(trackY));
 						if (newPosX> 1) newPosX = Number(1);
 						if (newPosY> 1) newPosY = Number(1);
 						if (newPosX< 0) newPosX = Number(0);
 						if (newPosY< 0) newPosY = Number(0);
+
 						this.setState({centerX: newPosX})
 						this.setState({centerY: newPosY})
-						this._panOffsetX = gestureState.dx;
-						this._panOffsetY = gestureState.dy;
+						this._panOffsetX = gestureState.dx*this.state.zoom;
+						this._panOffsetY = gestureState.dy*this.state.zoom;
 					}
 				}else{
 				//We are zooming the image
