@@ -13,19 +13,12 @@ This Image cropper is based on the gl-react-native [library](https://github.com/
 - `minZoom`: min zoom value, should be smaller than maxZoom value (default: 0) 
 - `panToMove`: Use pan to move image? (default: true)
 - `pinchToZoom` Use pinch to zoom image? (default: true)
+- `quality`: a value from 0 to 1 to describe the quality of the snapshot. 0 means 0% (most compressed) and 1 means 100% (best quality). (default: 1)
+- `type`: the file type default value is **"png"**, **"jpg"** is also supported. Refer to implementations to see more supported values. (default: jpg)
+
+#### `{ImageCrop}` Functions
+- `crop()`: returns a base64 encoded image.
+
 
 ## Example
-
-```html
-<ImageCrop 
-	ref={'cropper'}
-	image={this.state.image}
-	cropHeight={this.state.height}
-	cropWidth={this.state.width}
-	zoom={this.state.zoom}
-	maxZoom={80}
-	minZoom={20}
-	panToMove={true}
-	pinchToZoom={true}
-/>
-```
+See /example 
