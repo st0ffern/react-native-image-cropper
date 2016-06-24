@@ -1,0 +1,35 @@
+{
+  "name": "react-native-image-cropper",
+  "version": "0.0.1",
+  "description": "Crop image in React Native using pan to move, pinch to zoom -> capture to file or base64",
+  "main": "src/index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stoffern/react-native-image-cropper.git"
+  },
+  "keywords": [
+    "imagecropper",
+    "image",
+    "crop",
+    "react-native",
+    "gl-react-native",
+    "image-croppper"
+  ],
+  "author": "Kristoffer Klevenberg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stoffern/react-native-image-cropper/issues"
+  },
+  "homepage": "https://github.com/stoffern/react-native-image-cropper#readme",
+  "dependencies": {
+    "gl-react": "^2.2.4",
+    "gl-react-image": "0.0.2",
+    "gl-react-native": "^2.28.0"
+  }
+}

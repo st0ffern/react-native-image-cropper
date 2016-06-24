@@ -17,8 +17,8 @@ class CropExample extends Component {
 		super(props);
 		this.state = {
 			image: 'http://i.imgur.com/tCatS2c.jpg',
-			height: 300,
-			width: Dimensions.get('window').width,
+			height: 200,
+			width: 300,
 			zoom: 50,
 			showNew: true,
 			newImage: 'http://i.imgur.com/tCatS2c.jpg',
@@ -39,7 +39,6 @@ class CropExample extends Component {
 						minZoom={20}
 						panToMove={true}
 						pinchToZoom={true}
-						capturedImage={image => this.renderImage(image)}
 					/>
 					<View style={{flex: 1, marginTop: 20}}>
 						<Slider
@@ -69,7 +68,6 @@ class CropExample extends Component {
 	    		showNew: true,
 	    		newImage: res,
 	    	});
-	    	console.log('done')
     	})
     }
 }
