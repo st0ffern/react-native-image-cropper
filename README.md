@@ -1,4 +1,4 @@
-# react-native-image-crop
+# react-native-image-cropper
 
 This Image cropper is based on the gl-react-native [library](https://github.com/ProjectSeptemberInc/gl-react-native)
 
