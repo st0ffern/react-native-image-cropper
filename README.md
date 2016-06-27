@@ -1,7 +1,10 @@
-# react-native-image-cropper
+# react-native-image-cropper ![](https://img.shields.io/npm/v/react-native-image-cropper.svg) ![](https://img.shields.io/badge/gl--react->= 2.1-05F561.svg) ![](https://img.shields.io/badge/gl--react--native->= 2.28.0-05F561.svg) ![](https://img.shields.io/badge/gl--react--native->= 2.28.0-05F561.svg)
 
 This Image cropper is based on the gl-react-native [library](https://github.com/ProjectSeptemberInc/gl-react-native)
 
+## Requirements
+- `gl-react` You need to install gl-react. `npm i -S gl-react` 
+- `gl-react-native` You need to install gl-react-native and link the repo in RN. `npm i -S gl-react-native & rnpm link` 
 
 #### `{ImageCrop}` Props
 
@@ -21,4 +24,30 @@ This Image cropper is based on the gl-react-native [library](https://github.com/
 
 
 ## Example
-See /example 
+```js
+
+render() {
+  return (
+  <View>
+    <ImageCrop 
+      ref={'cropper'}
+      image={this.state.image}
+      cropHeight={this.state.height}
+      cropWidth={this.state.width}
+      zoom={this.state.zoom}
+      maxZoom={80}
+      minZoom={20}
+      panToMove={true}
+      pinchToZoom={true}
+    />
+    <Text onPress={this.capture()}>Capture()</Text>
+  </View>
+    
+  )
+} 
+capture(){
+  this.refs.cropper.crop()
+  .then(base64 => console.log(base64))
+}
+
+```
