@@ -2,7 +2,7 @@
 
 This Image cropper is based on the gl-react-native [library](https://github.com/ProjectSeptemberInc/gl-react-native)
 
-![Cropping View](http://im.ezgif.com/tmp/87375fc9ee.gif)
+![Cropping View](https://media.giphy.com/media/l46CDga4bxZccVxWU/giphy.gif)
 
 ## Requirements
 - `gl-react` You need to install gl-react. `npm i -S gl-react` 
