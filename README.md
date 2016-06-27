@@ -5,6 +5,7 @@ This Image cropper is based on the gl-react-native [library](https://github.com/
 ## Requirements
 - `gl-react` You need to install gl-react. `npm i -S gl-react` 
 - `gl-react-native` You need to install gl-react-native and link the repo in RN. `npm i -S gl-react-native & rnpm link` 
+- `react-native` Android requires you to have RN 0.28 or higher!
 
 #### `{ImageCrop}` Props
 
