@@ -108,8 +108,10 @@ class ImageCrop extends Component {
     });
   }
   componentWillReceiveProps(nextProps){
-    var zoom = (100 - nextProps.zoom)/100;
-    this.setState({ zoom: zoom })
+    if (this.props.zoom != nextProps.zoom) {
+      var zoom = (100 - nextProps.zoom)/100;
+      this.setState({ zoom: zoom });
+    }
   }
   render() {
     return (
