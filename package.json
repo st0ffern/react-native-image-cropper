@@ -37,6 +37,8 @@
   },
   "devDependencies": {
     "cz-conventional-changelog": "^1.1.7",
+    "eslint": "^3.2.2",
+    "eslint-plugin-react": "^6.0.0",
     "semantic-release": "^4.3.5"
   },
   "config": {
