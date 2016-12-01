@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
-  AppRegistry,
-  StyleSheet,
   View,
   Image,
   PanResponder
-} from 'react-native';
+} from 'react-native'
 
 import {Surface} from 'gl-react-native'
-const {Image: GLImage} = require("gl-react-image");
+const {Image: GLImage} = require("gl-react-image")
 
 const imageDimensionsAfterZoom = (viewport, dimensions, zoom) => {
   const ImageRatio = dimensions.width/dimensions.height
@@ -27,16 +25,17 @@ const imageDimensionsAfterZoom = (viewport, dimensions, zoom) => {
 }
 
 const movementFromZoom = (gestureState, viewport, dimensions, offsets, zoom) =>{
+  let newPosX, newPosY
   // X-axis
-  var widthOffset = dimensions.width-viewport.width
-  var pxVsMovX = (1/dimensions.width)
-  var moveX = (gestureState.dx*pxVsMovX) * zoom
+  let widthOffset = dimensions.width-viewport.width
+  let pxVsMovX = (1/dimensions.width)
+  let moveX = (gestureState.dx*pxVsMovX) * zoom
   newPosX = (parseFloat(offsets.x) - parseFloat(moveX))
 
   // Y-axis
-  var heightOffset = dimensions.height-viewport.height
-  var pxVsMovY = (1/dimensions.height)
-  var moveY = (gestureState.dy*pxVsMovY) * zoom
+  let heightOffset = dimensions.height-viewport.height
+  let pxVsMovY = (1/dimensions.height)
+  let moveY = (gestureState.dy*pxVsMovY) * zoom
   newPosY = (parseFloat(offsets.y) - parseFloat(moveY))
   return {
     x: newPosX,
@@ -47,7 +46,7 @@ const movementFromZoom = (gestureState, viewport, dimensions, offsets, zoom) =>{
 
 class ImageCrop extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       zoom: 1,
 
@@ -61,7 +60,7 @@ class ImageCrop extends Component {
       imageDimHeight: 0,
       imageDimWidth: 0,
       currentCapture: '',
-    };
+    }
   }
   componentWillMount(){
     Image.getSize(this.props.image, (width, height) => {
@@ -69,7 +68,7 @@ class ImageCrop extends Component {
       this.setState({
         imageHeight: height,
         imageWidth: width,
-      });
+      })
     })
 
     //
@@ -96,25 +95,25 @@ class ImageCrop extends Component {
 
       onPanResponderGrant: (evt, gestureState) => {
         //move variables
-        this.offsetX = this.state.centerX;
-        this.offsetY = this.state.centerY;
+        this.offsetX = this.state.centerX
+        this.offsetY = this.state.centerY
 
         //zoom variables
-        this.zoomLastDistance=0;
-        this.zoomCurrentDistance=0;
+        this.zoomLastDistance=0
+        this.zoomCurrentDistance=0
       },
 
       onPanResponderMove: (evt, gestureState) => {
         //We are moving the image
         if (evt.nativeEvent.changedTouches.length <= 1){
-          var trackX = (gestureState.dx/this.props.cropWidth)*this.state.zoom;
-          var trackY = (gestureState.dy/this.props.cropHeight)*this.state.zoom;
-          var newPosX = (Number(this.offsetX) - Number(trackX));
-          var newPosY = (Number(this.offsetY) - Number(trackY));
-          if (newPosX> 1) newPosX = Number(1);
-          if (newPosY> 1) newPosY = Number(1);
-          if (newPosX< 0) newPosX = Number(0);
-          if (newPosY< 0) newPosY = Number(0);
+          var trackX = (gestureState.dx/this.props.cropWidth)*this.state.zoom
+          var trackY = (gestureState.dy/this.props.cropHeight)*this.state.zoom
+          var newPosX = (Number(this.offsetX) - Number(trackX))
+          var newPosY = (Number(this.offsetY) - Number(trackY))
+          if (newPosX> 1) newPosX = Number(1)
+          if (newPosY> 1) newPosY = Number(1)
+          if (newPosX< 0) newPosX = Number(0)
+          if (newPosY< 0) newPosY = Number(0)
 
           var movement = movementFromZoom(
             gestureState, 
@@ -130,26 +129,26 @@ class ImageCrop extends Component {
           if (this.zoomLastDistance == 0){
             let a = evt.nativeEvent.changedTouches[0].locationX - evt.nativeEvent.changedTouches[1].locationX
             let b = evt.nativeEvent.changedTouches[0].locationY - evt.nativeEvent.changedTouches[1].locationY
-            let c = Math.sqrt( a*a + b*b );
-            this.zoomLastDistance = c.toFixed(1);
+            let c = Math.sqrt( a*a + b*b )
+            this.zoomLastDistance = c.toFixed(1)
           }else{
             let a = evt.nativeEvent.changedTouches[0].locationX - evt.nativeEvent.changedTouches[1].locationX
             let b = evt.nativeEvent.changedTouches[0].locationY - evt.nativeEvent.changedTouches[1].locationY
-            let c = Math.sqrt( a*a + b*b );
-            this.zoomCurrentDistance = c.toFixed(1);
+            let c = Math.sqrt( a*a + b*b )
+            this.zoomCurrentDistance = c.toFixed(1)
             
             //what is the zoom level
-            var screenDiagonal = Math.sqrt(this.state.imageHeight*this.state.imageHeight + this.state.imageWidth*this.state.imageWidth);
-            var distance = (this.zoomCurrentDistance-this.zoomLastDistance)/400;
-            var zoom = this.state.zoom-distance;
+            var screenDiagonal = Math.sqrt(this.state.imageHeight*this.state.imageHeight + this.state.imageWidth*this.state.imageWidth)
+            var distance = (this.zoomCurrentDistance-this.zoomLastDistance)/400
+            var zoom = this.state.zoom-distance
 
-            if (zoom<0)zoom=0.0000001;
-            if (zoom>1)zoom=1;
+            if (zoom<0)zoom=0.0000001
+            if (zoom>1)zoom=1
             this.setState({
               zoom: zoom,
             })
             //Set last distance..
-            this.zoomLastDistance=this.zoomCurrentDistance;
+            this.zoomLastDistance=this.zoomCurrentDistance
           }
         }
       }
@@ -157,8 +156,8 @@ class ImageCrop extends Component {
   }
   componentWillReceiveProps(nextProps){
     if (this.props.zoom != nextProps.zoom) {
-      var zoom = (100 - nextProps.zoom)/100;
-      this.setState({ zoom: zoom });
+      var zoom = (100 - nextProps.zoom)/100
+      this.setState({ zoom: zoom })
     }
 
     //
@@ -188,7 +187,7 @@ class ImageCrop extends Component {
 		        />
           </Surface>
         </View>
-    );
+    )
   }
   crop(){
     return this.refs.cropit.captureFrame({quality: this.props.quality, type: this.props.type, format: this.props.format})
@@ -216,4 +215,4 @@ ImageCrop.propTypes = {
   type: React.PropTypes.string,
   format: React.PropTypes.string,
 }
-module.exports=ImageCrop;
+module.exports=ImageCrop
