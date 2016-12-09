@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
-  StyleSheet,
-  ScrollView,
   Text,
+  View,
   Image,
   Slider,
-  View,
+  ScrollView,
+  AppRegistry,
   TouchableOpacity,
-  Dimensions
-} from 'react-native';
+} from 'react-native'
 
-import {ImageCrop} from '../src/'
+import {ImageCrop} from 'react-native-image-cropper'
 
-class CropExample extends Component {
+class ExampleC extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -71,4 +70,5 @@ class CropExample extends Component {
     })
   }
 }
-module.exports=CropExample;
+
+AppRegistry.registerComponent('Example', () => ExampleC)
