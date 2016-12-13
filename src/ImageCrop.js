@@ -90,7 +90,7 @@ class ImageCrop extends Component {
       onStartShouldSetPanResponderCapture: (evt, gestureState) => true,
       onMoveShouldSetPanResponder: (evt, gestureState) => true,
       onMoveShouldSetPanResponderCapture: (evt, gestureState) => true,
-      onPanResponderTerminationRequest: (evt, gestureState) => true,
+      onPanResponderTerminationRequest: (evt, gestureState) => false,
       onShouldBlockNativeResponder: (evt, gestureState) => true,
 
       onPanResponderGrant: (evt, gestureState) => {
