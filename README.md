@@ -4,13 +4,21 @@ This Image cropper is based on the gl-react-native [library](https://github.com/
 
 ![Cropping View](https://media.giphy.com/media/l46CDga4bxZccVxWU/giphy.gif)
 
+## Installation
+```
+npm i -S react-native-image-cropper
+```
+or
+```
+yarn add react-native-image-cropper
+```
+
 ## Requirements
 - `gl-react` You need to install gl-react. `npm i -S gl-react` 
 - `gl-react-native` You need to install gl-react-native and link the repo in RN. `npm i -S gl-react-native & rnpm link` 
 - `react-native` Android requires you to have RN 0.28 or higher!
 
 #### `{ImageCrop}` Props
-
 - `image` **(required)**: link to image that should be cropped.
 - `cropHeight` **(required)**: height of the image in cropped size.
 - `cropWidth` **(required)**: width of the image in cropped size.
@@ -28,7 +36,11 @@ This Image cropper is based on the gl-react-native [library](https://github.com/
 
 ## Example
 ```js
+...
+import {ImageCrop} from 'react-native-image-cropper'
 
+
+...
 render() {
   return (
   <View>
@@ -52,5 +64,6 @@ capture(){
   this.refs.cropper.crop()
   .then(base64 => console.log(base64))
 }
+...
 
 ```
