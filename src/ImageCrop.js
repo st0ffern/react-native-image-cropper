@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {
   View,
   Image,
+  PixelRatio,
   PanResponder
 } from 'react-native'
 
@@ -177,7 +178,7 @@ class ImageCrop extends Component {
   render() {
     return (
         <View {...this._panResponder.panHandlers}>
-          <Surface width={this.props.cropWidth} height={this.props.cropHeight} ref="cropit">
+          <Surface width={this.props.cropWidth} height={this.props.cropHeight} pixelRatio={this.props.pixelRatio} ref="cropit">
 		        <GLImage
 		          source={{ uri: this.props.image}}
               imageSize={{height: this.state.imageHeight, width: this.state.imageWidth}}
@@ -201,6 +202,7 @@ ImageCrop.defaultProps = {
   minZoom: 0,
   maxZoom: 100,
   quality: 1,
+  pixelRatio: PixelRatio.get(),
   type: 'jpg',
   format: 'base64',
 }
@@ -212,6 +214,7 @@ ImageCrop.propTypes = {
   maxZoom: React.PropTypes.number,
   minZoom: React.PropTypes.number,
   quality: React.PropTypes.number,
+  pixelRatio: React.PropTypes.number,
   type: React.PropTypes.string,
   format: React.PropTypes.string,
 }
