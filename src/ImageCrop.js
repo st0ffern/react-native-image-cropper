@@ -78,7 +78,7 @@ class ImageCrop extends Component {
     this._dimensionAfterZoom = imageDimensionsAfterZoom(
       {height: this.props.cropHeight, width: this.props.cropWidth},
       {height: this.state.imageHeight, width: this.state.imageWidth},
-      this.state.zoom 
+      this.state.zoom
     )
 
     this.setState({
@@ -117,10 +117,10 @@ class ImageCrop extends Component {
           if (newPosY< 0) newPosY = Number(0)
 
           var movement = movementFromZoom(
-            gestureState, 
-            {width: this.props.cropWidth, height: this.props.cropHeight}, 
-            {width: this.state.imageDimWidth, height: this.state.imageDimHeight}, 
-            {x: this.offsetX, y: this.offsetY}, 
+            gestureState,
+            {width: this.props.cropWidth, height: this.props.cropHeight},
+            {width: this.state.imageDimWidth, height: this.state.imageDimHeight},
+            {x: this.offsetX, y: this.offsetY},
             this.state.zoom
           )
           this.setState({centerX: movement.x})
@@ -137,7 +137,7 @@ class ImageCrop extends Component {
             let b = evt.nativeEvent.changedTouches[0].locationY - evt.nativeEvent.changedTouches[1].locationY
             let c = Math.sqrt( a*a + b*b )
             this.zoomCurrentDistance = c.toFixed(1)
-            
+
             //what is the zoom level
             var screenDiagonal = Math.sqrt(this.state.imageHeight*this.state.imageHeight + this.state.imageWidth*this.state.imageWidth)
             var distance = (this.zoomCurrentDistance-this.zoomLastDistance)/400
@@ -167,7 +167,7 @@ class ImageCrop extends Component {
     this._dimensionAfterZoom = imageDimensionsAfterZoom(
       {height: this.props.cropHeight, width: this.props.cropWidth},
       {height: this.state.imageHeight, width: this.state.imageWidth},
-      this.state.zoom 
+      this.state.zoom
     )
 
     this.setState({
@@ -178,7 +178,7 @@ class ImageCrop extends Component {
   render() {
     return (
         <View {...this._panResponder.panHandlers}>
-          <Surface width={this.props.cropWidth} height={this.props.cropHeight} pixelRatio={this.props.pixelRatio} ref="cropit">
+          <Surface width={this.props.cropWidth} height={this.props.cropHeight} pixelRatio={this.props.pixelRatio} backgroundColor="transparent" ref="cropit">
 		        <GLImage
 		          source={{ uri: this.props.image}}
               imageSize={{height: this.state.imageHeight, width: this.state.imageWidth}}
