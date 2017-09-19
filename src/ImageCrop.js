@@ -191,7 +191,7 @@ class ImageCrop extends Component {
     )
   }
   crop(){
-    return this.refs.cropit.captureFrame({quality: this.props.quality, type: this.props.type, format: this.props.format})
+    return this.refs.cropit.captureFrame({quality: this.props.quality, type: this.props.type, format: this.props.format, filePath: this.props.filePath})
   }
 }
 ImageCrop.defaultProps = {
