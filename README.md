@@ -29,6 +29,8 @@ yarn add react-native-image-cropper
 - `pinchToZoom` Use pinch to zoom image? (default: true)
 - `quality`: a value from 0 to 1 to describe the quality of the snapshot. 0 means 0% (most compressed) and 1 means 100% (best quality). (default: 1)
 - `type`: the file type default value is **"png"**, **"jpg"** is also supported. Refer to implementations to see more supported values. (default: jpg)
+- `format`: the format of the output. Supported values: **"base64"**, **"file"**. (default: base64)
+- `filePath`: if format is **"file"**, the path to write the image to (default: "")
 - `pixelRatio`: the pixel ratio to use for the rendering. By default the screen pixel scale will be used.
 
 #### `{ImageCrop}` Functions
