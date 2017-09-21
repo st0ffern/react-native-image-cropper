@@ -191,7 +191,7 @@ class ImageCrop extends Component {
     )
   }
   crop(){
-    return this.refs.cropit.captureFrame({quality: this.props.quality, type: this.props.type, format: this.props.format})
+    return this.refs.cropit.captureFrame({quality: this.props.quality, type: this.props.type, format: this.props.format, filePath: this.props.filePath})
   }
 }
 ImageCrop.defaultProps = {
@@ -205,6 +205,7 @@ ImageCrop.defaultProps = {
   pixelRatio: PixelRatio.get(),
   type: 'jpg',
   format: 'base64',
+  filePath: ''
 }
 ImageCrop.propTypes = {
   image: React.PropTypes.string.isRequired,
@@ -217,5 +218,6 @@ ImageCrop.propTypes = {
   pixelRatio: React.PropTypes.number,
   type: React.PropTypes.string,
   format: React.PropTypes.string,
+  filePath: React.PropTypes.string
 }
 module.exports=ImageCrop
