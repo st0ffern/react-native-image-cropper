@@ -30,14 +30,14 @@
   "homepage": "https://github.com/stoffern/react-native-image-cropper#readme",
   "dependencies": {
     "gl-react": "^2.2.8",
-    "gl-react-image": "0.0.2",
+    "gl-react-image": "3.1.0",
     "gl-react-native": "^2.38.0"
   },
   "devDependencies": {
-    "cz-conventional-changelog": "^1.2.0",
-    "eslint": "^3.11.1",
-    "eslint-plugin-react": "^6.7.1",
-    "semantic-release": "^6.3.2"
+    "cz-conventional-changelog": "^2.0.0",
+    "eslint": "^4.8.0",
+    "eslint-plugin-react": "^7.4.0",
+    "semantic-release": "^8.0.3"
   },
   "config": {
     "commitizen": {
