@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import {
   View,
   Image,
@@ -208,16 +209,16 @@ ImageCrop.defaultProps = {
   filePath: ''
 }
 ImageCrop.propTypes = {
-  image: React.PropTypes.string.isRequired,
-  cropWidth: React.PropTypes.number.isRequired,
-  cropHeight: React.PropTypes.number.isRequired,
-  zoomFactor: React.PropTypes.number,
-  maxZoom: React.PropTypes.number,
-  minZoom: React.PropTypes.number,
-  quality: React.PropTypes.number,
-  pixelRatio: React.PropTypes.number,
-  type: React.PropTypes.string,
-  format: React.PropTypes.string,
-  filePath: React.PropTypes.string
+  image: PropTypes.string.isRequired,
+  cropWidth: PropTypes.number.isRequired,
+  cropHeight: PropTypes.number.isRequired,
+  zoomFactor: PropTypes.number,
+  maxZoom: PropTypes.number,
+  minZoom: PropTypes.number,
+  quality: PropTypes.number,
+  pixelRatio: PropTypes.number,
+  type: PropTypes.string,
+  format: PropTypes.string,
+  filePath: PropTypes.string
 }
 module.exports=ImageCrop
