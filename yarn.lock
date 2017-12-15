@@ -961,13 +961,6 @@ github@^12.0.0:
     mime "^2.0.3"
     netrc "^0.1.4"
 
-gl-react-image@0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/gl-react-image/-/gl-react-image-0.0.2.tgz#61c573f6b59d036c58d3f64934f0cd426f437deb"
-  dependencies:
-    rect-clamp "0.0.0"
-    rect-crop "0.0.0"
-
 gl-react-native@^2.38.0:
   version "2.47.0"
   resolved "https://registry.yarnpkg.com/gl-react-native/-/gl-react-native-2.47.0.tgz#0d2418314973f6bd3bd7f83acf776caa61339baf"

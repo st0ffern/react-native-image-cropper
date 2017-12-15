@@ -32,7 +32,6 @@
     "eslint": "^4.8.0",
     "eslint-plugin-react": "^7.4.0",
     "gl-react": "^2.2.8",
-    "gl-react-image": "0.0.2",
     "gl-react-native": "^2.38.0"
   },
   "devDependencies": {
