@@ -21,7 +21,7 @@ yarn add react-native-image-cropper
 - `react-native` Android requires you to have RN 0.28 or higher!
 
 #### `{ImageCrop}` Props
-- `image` **(required)**: link to image that should be cropped.
+- `image` **(required)**: uri to image that should be cropped.
 - `cropHeight` **(required)**: height of the image in cropped size.
 - `cropWidth` **(required)**: width of the image in cropped size.
 - `zoom`: range 0 - 100 setting zoom value. where 100 = full zoom. (default: 0)
