@@ -1967,11 +1967,11 @@ readable-stream@^2.0.0, readable-stream@^2.0.6, readable-stream@^2.1.5, readable
     string_decoder "~1.0.3"
     util-deprecate "~1.0.1"
 
-rect-clamp@0.0.0:
+rect-clamp@^0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/rect-clamp/-/rect-clamp-0.0.0.tgz#652f91c5a5bfeac125c52b9ade82ebe05507641b"
 
-rect-crop@0.0.0:
+rect-crop@^0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/rect-crop/-/rect-crop-0.0.0.tgz#f6ea75863021177566887d4ca60e466e8a1c3898"
 

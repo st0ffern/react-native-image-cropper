@@ -32,7 +32,10 @@
     "eslint": "^4.8.0",
     "eslint-plugin-react": "^7.4.0",
     "gl-react": "^2.2.8",
-    "gl-react-native": "^2.38.0"
+    "gl-react-native": "^2.38.0",
+    "prop-types": "^15.6.0",
+    "rect-clamp": "^0.0.0",
+    "rect-crop": "^0.0.0"
   },
   "devDependencies": {
     "cz-conventional-changelog": "^2.0.0",
