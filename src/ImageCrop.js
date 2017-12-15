@@ -8,7 +8,7 @@ import {
 } from 'react-native'
 
 import {Surface} from 'gl-react-native'
-const {Image: GLImage} = require("gl-react-image")
+const {Image: GLImage} = require("./Image")
 
 const imageDimensionsAfterZoom = (viewport, dimensions, zoom) => {
   const ImageRatio = dimensions.width/dimensions.height
