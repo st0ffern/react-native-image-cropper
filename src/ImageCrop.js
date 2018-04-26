@@ -157,6 +157,14 @@ class ImageCrop extends Component {
     })
   }
   componentWillReceiveProps(nextProps){
+    // Update image size on image props update
+    Image.getSize(nextProps.image, (width, height) => {
+      this.setState({
+        imageHeight: height,
+        imageWidth: width,
+      })
+    })
+
     if (this.props.zoom != nextProps.zoom) {
       var zoom = (100 - nextProps.zoom)/100
       this.setState({ zoom: zoom })
