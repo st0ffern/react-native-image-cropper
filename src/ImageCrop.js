@@ -196,6 +196,7 @@ class ImageCrop extends Component {
 		          center={[this.state.centerX, this.state.centerY]}
 		        />
           </Surface>
+          {this.props.Overlay}
         </View>
     )
   }
@@ -214,7 +215,8 @@ ImageCrop.defaultProps = {
   pixelRatio: PixelRatio.get(),
   type: 'jpg',
   format: 'base64',
-  filePath: ''
+  filePath: '',
+  Overlay: null,
 }
 ImageCrop.propTypes = {
   image: PropTypes.string.isRequired,
@@ -227,6 +229,7 @@ ImageCrop.propTypes = {
   pixelRatio: PropTypes.number,
   type: PropTypes.string,
   format: PropTypes.string,
-  filePath: PropTypes.string
+  filePath: PropTypes.string,
+  Overlay: PropTypes.func,
 }
 module.exports=ImageCrop
