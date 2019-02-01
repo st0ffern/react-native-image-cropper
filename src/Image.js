@@ -26,7 +26,7 @@ void main () {
   }
 });
 
-const Image = GL.createComponent(
+const Image = React.Component(
 ({
   width,
   height,
