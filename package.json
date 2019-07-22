@@ -31,8 +31,8 @@
   "dependencies": {
     "eslint": "^4.8.0",
     "eslint-plugin-react": "^7.4.0",
-    "gl-react": "^2.2.8",
-    "gl-react-native": "^2.38.0",
+    "gl-react": "^2.3.1",
+    "gl-react-native": "git://github.com/gre/gl-react-native-v2.git#10d3dce593080301dc12e467cd5e1c3d22995167",
     "prop-types": "^15.6.0",
     "rect-clamp": "^0.0.0",
     "rect-crop": "^0.0.0"
