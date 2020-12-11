@@ -961,13 +961,14 @@ github@^12.0.0:
     mime "^2.0.3"
     netrc "^0.1.4"
 
-gl-react-native@^2.38.0:
-  version "2.47.0"
-  resolved "https://registry.yarnpkg.com/gl-react-native/-/gl-react-native-2.47.0.tgz#0d2418314973f6bd3bd7f83acf776caa61339baf"
+"gl-react-native@git://github.com/gre/gl-react-native-v2.git#10d3dce593080301dc12e467cd5e1c3d22995167":
+  version "2.57.0"
+  uid "10d3dce593080301dc12e467cd5e1c3d22995167"
+  resolved "git://github.com/gre/gl-react-native-v2.git#10d3dce593080301dc12e467cd5e1c3d22995167"
   dependencies:
     invariant "2.2.0"
 
-gl-react@^2.2.8:
+gl-react@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/gl-react/-/gl-react-2.3.1.tgz#4a153eba80ad926a5474e8b5615f12b0288b6dc9"
   dependencies:
@@ -1149,8 +1150,8 @@ inherits@2, inherits@^2.0.1, inherits@^2.0.3, inherits@~2.0.0, inherits@~2.0.3:
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
 
 ini@^1.2.0, ini@^1.3.2, ini@^1.3.4:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
+  version "1.3.7"
+  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.7.tgz#a09363e1911972ea16d7a8851005d84cf09a9a84"
 
 inquirer@^3.0.6:
   version "3.3.0"
