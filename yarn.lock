@@ -961,13 +961,14 @@ github@^12.0.0:
     mime "^2.0.3"
     netrc "^0.1.4"
 
-gl-react-native@^2.38.0:
-  version "2.47.0"
-  resolved "https://registry.yarnpkg.com/gl-react-native/-/gl-react-native-2.47.0.tgz#0d2418314973f6bd3bd7f83acf776caa61339baf"
+"gl-react-native@git://github.com/gre/gl-react-native-v2.git#10d3dce593080301dc12e467cd5e1c3d22995167":
+  version "2.57.0"
+  uid "10d3dce593080301dc12e467cd5e1c3d22995167"
+  resolved "git://github.com/gre/gl-react-native-v2.git#10d3dce593080301dc12e467cd5e1c3d22995167"
   dependencies:
     invariant "2.2.0"
 
-gl-react@^2.2.8:
+gl-react@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/gl-react/-/gl-react-2.3.1.tgz#4a153eba80ad926a5474e8b5615f12b0288b6dc9"
   dependencies:
@@ -2387,8 +2388,8 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
 ua-parser-js@^0.7.9:
-  version "0.7.17"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.17.tgz#e9ec5f9498b9ec910e7ae3ac626a805c4d09ecac"
+  version "0.7.28"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
 
 uglify-js@^2.6:
   version "2.8.29"
