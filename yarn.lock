@@ -961,13 +961,14 @@ github@^12.0.0:
     mime "^2.0.3"
     netrc "^0.1.4"
 
-gl-react-native@^2.38.0:
-  version "2.47.0"
-  resolved "https://registry.yarnpkg.com/gl-react-native/-/gl-react-native-2.47.0.tgz#0d2418314973f6bd3bd7f83acf776caa61339baf"
+"gl-react-native@git://github.com/gre/gl-react-native-v2.git#10d3dce593080301dc12e467cd5e1c3d22995167":
+  version "2.57.0"
+  uid "10d3dce593080301dc12e467cd5e1c3d22995167"
+  resolved "git://github.com/gre/gl-react-native-v2.git#10d3dce593080301dc12e467cd5e1c3d22995167"
   dependencies:
     invariant "2.2.0"
 
-gl-react@^2.2.8:
+gl-react@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/gl-react/-/gl-react-2.3.1.tgz#4a153eba80ad926a5474e8b5615f12b0288b6dc9"
   dependencies:
@@ -1091,8 +1092,8 @@ hoek@4.x.x:
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-4.2.0.tgz#72d9d0754f7fe25ca2d01ad8f8f9a9449a89526d"
 
 hosted-git-info@^2.1.4, hosted-git-info@^2.4.2:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.5.0.tgz#6d60e34b3abbc8313062c3b798ef8d901a07af3c"
+  version "2.8.9"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
 
 http-cache-semantics@3.8.1:
   version "3.8.1"
